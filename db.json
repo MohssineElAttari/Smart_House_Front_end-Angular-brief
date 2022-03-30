@@ -1,0 +1,90 @@
+{
+  "house": [
+    {
+      "id": 1,
+      "name": "FamilyHouse",
+      "address": "X street address",
+      "user": {
+        "id": 1,
+        "userName": "username",
+        "password": "password"
+      },
+      "floors": [
+        {
+          "id": 1,
+          "number": 1,
+          "rooms": [
+            {
+              "id": 1,
+              "number": 1,
+              "devices": [
+                {
+                  "id": 1,
+                  "name": "lamp",
+                  "status": "ON"
+                },
+                {
+                  "id": 2,
+                  "name": "tv",
+                  "status": "ON"
+                },
+                {
+                  "id": 3,
+                  "name": "camera",
+                  "status": "ON"
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "rooms": [
+                {
+                  "id": 3,
+                  "number": 1,
+                  "devices": [
+                    {
+                      "id": 4,
+                      "name": "lamp",
+                      "status": "ON"
+                    },
+                    {
+                      "id": 5,
+                      "name": "tv",
+                      "status": "ON"
+                    },
+                    {
+                      "id": 6,
+                      "name": "camera",
+                      "status": "ON"
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "number": 1,
+                  "devices": [
+                    {
+                      "id": 7,
+                      "name": "lamp",
+                      "status": "ON"
+                    },
+                    {
+                      "id": 8,
+                      "name": "tv",
+                      "status": "ON"
+                    },
+                    {
+                      "id": 9,
+                      "name": "camera",
+                      "status": "ON"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
