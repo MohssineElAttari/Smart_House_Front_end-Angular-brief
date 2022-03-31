@@ -1,64 +1,30 @@
-<div class="row my-4">
-    <div class="col-md-6">
-        <h3>List OF Divces</h3>
-    </div>
-    <div class="col-md-6 text-right">
-        <button class="btn btn-success btn-sm">
-            <i class="fa fa-plus">
-            </i>
-            New Dives
-        </button>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-md-6 mx-auto">
-
-        <div class="form-groupe">
-            <label for="label"> label</label>
-            <input placeholder="Add new langage" id="label" type="text" class="form-control">
-        </div>
-
-        <div class="form-check my-2">
-            <label class="form-check-label">
-                <input type="checkbox" class="form-check-input">
-                Completed
-            </label>
-        </div>
-
-        <button class="btn btn-warning btn-block">
-            <i class="fa fa-refresh"></i> Update task
-        </button>
-        <!-- {{myTask | json}} -->
-        <button class="btn btn-success btn-block">
-            <i class="fa fa-send"></i> New Divce
-        </button>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6 mx-auto">
-        <input type="text" placeholder="search..." class="form-control my-2">
-        <ul class="list-group">
-            <ul class="list-group">
-
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-
-                    <button class="btn btn-warning btn-sm">
-                        <i class="fa fa-pencil"></i>
-                    </button>
-
-                    <span class="badge badge-pill">
-                        <i class="fa"></i>
-                    </span>
-                    <button class="btn btn-sm btn-danger">
-                        <i class="fa fa-trash"></i>
-                    </button>
-
-                </li>
-
-            </ul>
-        </ul>
-    </div>
-</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Activations</th>
+            <th scope="col">Device</th>
+            <th scope="col">Room</th>
+            <th scope="col">Floor</th>
+            <th scope="col">Sattus</th>
+            <th scope="col">Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let device of devices;">
+            <th scope="row">1</th>
+            <td>
+                <a class="btn btn-success" href="#"><i class="fa fa-play fa-2x" aria-hidden="true"></i></a>
+            </td>
+            <td>{{device.name}}</td>
+            <td>{{device.room.name}}</td>
+            <td>{{device.floor.name}}</td>
+            <td>{{device.status}}</td>
+            <td>
+                <a class="btn btn-danger" href="#"><i class="fa fa-trash-o fa-lg"></i></a> |
+                <a class="btn btn-warning" href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a> |
+                <a class="btn btn-info" href="#">More</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
