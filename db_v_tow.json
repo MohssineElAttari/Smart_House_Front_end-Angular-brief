@@ -1,0 +1,125 @@
+{
+  "houses": [
+    {
+      "id": 1,
+      "name": "FamilyHouse",
+      "address": "X street address",
+      "user": {
+        "id": 1,
+        "userName": "username",
+        "password": "password"
+      },
+      "floors": [
+        {
+          "id": 1,
+          "number": 1,
+          "name": "floor1"
+        }
+      ],
+      "users": [
+        {
+          "id": 1,
+          "userName": "mohssine",
+          "password": "12345678"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "mohssine",
+      "password": "12345678"
+    }
+  ],
+  "floors": [
+    {
+      "id": 1,
+      "number": 1,
+      "name": "floor1",
+      "rooms": [
+        {
+          "id": 1,
+          "number": 1,
+          "name": "Bedroom"
+        }
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "number": 1,
+      "name": "Bedroom",
+      "devices": [
+        {
+          "id": 1,
+          "name": "Lamp",
+          "status": "On"
+        }
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "name": "Lamp",
+      "status": "On",
+      "room": {
+        "id": 1,
+        "name": "Bedroom",
+        "number": 1
+      },
+      "floor": {
+        "id": 1,
+        "name": "floor1",
+        "number": 1
+      }
+    },
+    {
+      "id": 2,
+      "name": "Tv",
+      "status": "Of",
+      "room": {
+        "id": 2,
+        "name": "Living room",
+        "number": 2
+      },
+      "floor": {
+        "id": 2,
+        "name": "floor2",
+        "number": 2
+      }
+    },
+    {
+      "id": 3,
+      "name": "tv",
+      "status": "Of",
+      "room": {
+        "id": 3,
+        "name": "Room1",
+        "number": 1
+      },
+      "floor": {
+        "id": 3,
+        "name": "floor1",
+        "number": 3
+      }
+    },
+    {
+      "id": 4,
+      "name": "Camera",
+      "status": "Of",
+      "room": {
+        "id": 4,
+        "name": "House Entry",
+        "number": 4
+      },
+      "floor": {
+        "id": 4,
+        "name": "floor0",
+        "number": 4
+      }
+    }
+  ]
+}
