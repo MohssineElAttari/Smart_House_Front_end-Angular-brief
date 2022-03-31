@@ -36,49 +36,44 @@
               ]
             },
             {
+              "id": 2,
               "number": 2,
-              "rooms": [
-                {
-                  "id": 3,
-                  "number": 1,
-                  "devices": [
-                    {
-                      "id": 4,
-                      "name": "lamp",
-                      "status": "ON"
-                    },
-                    {
-                      "id": 5,
-                      "name": "tv",
-                      "status": "ON"
-                    },
-                    {
-                      "id": 6,
-                      "name": "camera",
-                      "status": "ON"
-                    }
-                  ]
-                },
+              "devices": [
                 {
                   "id": 4,
-                  "number": 1,
-                  "devices": [
-                    {
-                      "id": 7,
-                      "name": "lamp",
-                      "status": "ON"
-                    },
-                    {
-                      "id": 8,
-                      "name": "tv",
-                      "status": "ON"
-                    },
-                    {
-                      "id": 9,
-                      "name": "camera",
-                      "status": "ON"
-                    }
-                  ]
+                  "name": "lamp",
+                  "status": "ON"
+                },
+                {
+                  "id": 5,
+                  "name": "tv",
+                  "status": "ON"
+                },
+                {
+                  "id": 6,
+                  "name": "camera",
+                  "status": "ON"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "number": 1,
+              "devices": [
+                {
+                  "id": 7,
+                  "name": "lamp",
+                  "status": "ON"
+                },
+                {
+                  "id": 8,
+                  "name": "tv",
+                  "status": "ON"
+                },
+                {
+                  "id": 9,
+                  "name": "camera",
+                  "status": "ON"
                 }
               ]
             }
