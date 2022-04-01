@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HouseService } from '../../services/house.service';
 import { House } from '../../models/house.model';
 import { User } from 'src/app/models/user.model';
@@ -15,7 +15,7 @@ import { DeviceService } from 'src/app/services/device.service';
 export class HouseComponent implements OnInit {
 
   constructor(private deviceService: DeviceService) { }
-
+  @Input() myTest: any;
   ngOnInit(): void {
     this.GetAllDevices();
 
