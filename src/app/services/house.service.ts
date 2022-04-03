@@ -6,10 +6,16 @@ import { Device } from '../models/device.model';
   providedIn: 'root'
 })
 export class HouseService {
-  apiURL = "http://localhost:5000/houses";
+  apiURL = "http://localhost:5000";
   constructor(private http: HttpClient) { }
 
   findAll() {
-    return this.http.get<Device[]>(this.apiURL);
+    return "";
+  }
+
+  addDevice(device: Device) {
+    return this.http.put<Device>(
+      this.apiURL + `/devices`, device
+    )
   }
 }
