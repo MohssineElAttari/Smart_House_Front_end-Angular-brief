@@ -87,7 +87,7 @@
             <td>
                 <a (click)="active(device)" class="btn" [ngClass]="{'btn-success':device.active,
                 'btn-danger':!device.active}" href="#"><i class="fa fa-2x"
-                        [ngClass]="{'fa-play':device.status,'fa-stop':!device.status}" aria-hidden="true"></i></a>
+                        [ngClass]="{'fa-play':device.active,'fa-stop':!device.active}" aria-hidden="true"></i></a>
             </td>
             <td>{{device.name}}</td>
             <td>{{device.room}}</td>
@@ -95,7 +95,7 @@
             <td>{{device.status}}</td>
             <td>
                 <a (click)="confirmBox(device)" class="btn btn-danger" href="#"><i class="fa fa-trash-o fa-lg"></i></a> |
-                <a class="btn btn-warning" href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a> |
+                <a (click)="editeDevice(device)" class="btn btn-warning" href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a> |
                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">More</button>
             </td>
         </tr>

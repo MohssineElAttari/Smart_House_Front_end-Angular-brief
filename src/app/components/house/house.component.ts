@@ -1,6 +1,5 @@
 import { Room } from './../../models/room.model';
 import { Component, Input, OnInit } from '@angular/core';
-import { HouseService } from '../../services/house.service';
 import { House } from '../../models/house.model';
 import { User } from 'src/app/models/user.model';
 import { Floor } from 'src/app/models/floor.model';
@@ -56,11 +55,18 @@ export class HouseComponent implements OnInit {
   }
 
   public persistDevice() {
+
     this.deviceService.add(this.myDevice).subscribe(device => {
       this.devicesTow = this.devices = [device, ...this.devices];
       this.showForm = false;
       this.initForm();
+      Swal.fire(
+        'Data has been added successfully!',
+        'You clicked the button!',
+        'success'
+      )
     })
+
   }
 
   public initForm() {
@@ -80,8 +86,15 @@ export class HouseComponent implements OnInit {
   }
 
   public updateDevice() {
-
+    this.deviceService.update(this.myDevice)
+      .subscribe(
+        device => {
+          this.initForm();
+          this.editForm = false;
+        }
+      );
   }
+
   public active(device: Device) {
     this.deviceService.activeted(device).subscribe(() => {
       device.active = !device.active;
@@ -91,6 +104,15 @@ export class HouseComponent implements OnInit {
         device.status = "On"
       }
     })
+  }
+  show() {
+    this.showForm = true;
+  }
+  editeDevice(device: Device) {
+    this.myDevice = device;
+    this.editForm = true;
+    this.show();
+    // console.log(this.myTask);
   }
 
   confirmBox(device: Device) {
