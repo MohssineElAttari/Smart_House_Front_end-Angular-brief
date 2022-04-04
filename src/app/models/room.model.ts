@@ -6,3 +6,5 @@ export interface Room {
     name: string,
     devices?: Device[]
 }
+
+export const initialRoom:Room={"number":0,"name":""};

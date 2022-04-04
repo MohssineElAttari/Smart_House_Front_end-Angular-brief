@@ -65,16 +65,16 @@
     {
       "id": 1,
       "name": "Lamp",
-      "active": false,
-      "status": "Of",
+      "active": true,
+      "status": "On",
       "room": "Bedroom",
       "floor": "floor1"
     },
     {
       "id": 2,
       "name": "Tv",
-      "active": false,
-      "status": "Of",
+      "active": true,
+      "status": "On",
       "room": "Living room",
       "floor": "floor2"
     },
@@ -91,7 +91,7 @@
       "name": "Camera",
       "active": false,
       "status": "Of",
-      "room": "House Entry",
+      "room": "qsqs",
       "floor": "floor0"
     }
   ]
