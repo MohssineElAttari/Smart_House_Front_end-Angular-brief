@@ -1,8 +1,8 @@
 import { Device } from "./device.model";
 
 export interface Room {
-    id: number,
+    id?: number,
     number: number,
     name: string,
-    devices: Device[]
+    devices?: Device[]
 }
