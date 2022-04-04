@@ -24,4 +24,9 @@ export class DeviceService {
   activeted(device: Device) {
     return this.http.patch(`${this.apiURL}/devices/${device.id}`, { active: !device.active, status: device.status == 'On' ? 'Of' : 'On' });
   }
+
+  update(device: Device) {
+    return this.http.put(`${this.apiURL}/devices/${device.id}`, device);
+  }
+
 }
