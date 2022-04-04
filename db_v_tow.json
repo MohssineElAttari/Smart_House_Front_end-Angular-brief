@@ -55,6 +55,7 @@
         {
           "id": 1,
           "name": "Lamp",
+          "active": true,
           "status": "On"
         }
       ]
@@ -64,62 +65,34 @@
     {
       "id": 1,
       "name": "Lamp",
-      "status": "On",
-      "room": {
-        "id": 1,
-        "name": "Bedroom",
-        "number": 1
-      },
-      "floor": {
-        "id": 1,
-        "name": "floor1",
-        "number": 1
-      }
+      "active": false,
+      "status": "Of",
+      "room": "Bedroom",
+      "floor": "floor1"
     },
     {
       "id": 2,
       "name": "Tv",
+      "active": false,
       "status": "Of",
-      "room": {
-        "id": 2,
-        "name": "Living room",
-        "number": 2
-      },
-      "floor": {
-        "id": 2,
-        "name": "floor2",
-        "number": 2
-      }
+      "room": "Living room",
+      "floor": "floor2"
     },
     {
       "id": 3,
       "name": "tv",
+      "active": false,
       "status": "Of",
-      "room": {
-        "id": 3,
-        "name": "Room1",
-        "number": 1
-      },
-      "floor": {
-        "id": 3,
-        "name": "floor1",
-        "number": 3
-      }
+      "room": "Room1",
+      "floor": "floor1"
     },
     {
       "id": 4,
       "name": "Camera",
+      "active": false,
       "status": "Of",
-      "room": {
-        "id": 4,
-        "name": "House Entry",
-        "number": 4
-      },
-      "floor": {
-        "id": 4,
-        "name": "floor0",
-        "number": 4
-      }
+      "room": "House Entry",
+      "floor": "floor0"
     }
   ]
 }

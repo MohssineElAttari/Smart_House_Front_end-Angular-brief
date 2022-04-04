@@ -6,6 +6,8 @@ import { User } from 'src/app/models/user.model';
 import { Floor } from 'src/app/models/floor.model';
 import { Device } from 'src/app/models/device.model';
 import { DeviceService } from 'src/app/services/device.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-house',
@@ -23,15 +25,11 @@ export class HouseComponent implements OnInit {
 
   myDevice: Device = {
     'name': '',
-    'status': false,
+    'active': false,
+    'status': '',
     'room': '',
     'floor': ''
   }
-
-  // myRoom: Room = {
-  //   'number': 0,
-  //   'name': '',
-  // }
 
   devices: any = [];
 
@@ -57,16 +55,65 @@ export class HouseComponent implements OnInit {
       });
   }
 
+  public persistDevice() {
+    this.deviceService.add(this.myDevice).subscribe(device => {
+      this.devicesTow = this.devices = [device, ...this.devices];
+      this.showForm = false;
+      this.initForm();
+    })
+  }
+
+  public initForm() {
+    this.myDevice = {
+      'name': '',
+      'active': false,
+      'status': '',
+      'room': '',
+      'floor': ''
+    }
+  }
+
+  public deleteDevice(id: number) {
+    this.deviceService.delete(id).subscribe(() => {
+      this.devices = this.devices = this.devices.filter((device: Device) => device.id != id);
+    })
+  }
+
   public updateDevice() {
 
   }
-
-  public persistDevice() {
-    this.deviceService.addDevice(this.myDevice).subscribe(device => {
-      this.devicesTow = this.devices = [device, ...this.devices];
-      this.showForm=false;
+  public active(device: Device) {
+    this.deviceService.activeted(device).subscribe(() => {
+      device.active = !device.active;
+      if (device.status == "On") {
+        device.status = "Of"
+      } else {
+        device.status = "On"
+      }
     })
-
   }
 
+  confirmBox(device: Device) {
+    Swal.fire({
+      title: 'Are you sure want to remove?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire(
+          'Deleted!',
+          'Your imaginary file has been deleted.',
+          'success'
+        )
+        this.deleteDevice(device.id!);
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire(
+          'Cancelled',
+          'error'
+        )
+      }
+    })
+  }
 }

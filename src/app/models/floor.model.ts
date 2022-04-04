@@ -4,5 +4,4 @@ export interface Floor {
     id: number,
     number: number,
     name: string,
-    rooms: Room[]
 }

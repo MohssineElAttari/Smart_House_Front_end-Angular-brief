@@ -5,6 +5,6 @@ export interface House {
     id: number,
     name: string,
     adress: string,
-    user: User,
-    floors: Floor[]
+    user?: User,
+    floors?: Floor[]
 }
