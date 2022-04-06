@@ -63,26 +63,18 @@
   ],
   "devices": [
     {
-      "id": 1,
-      "name": "Lamp",
-      "active": true,
-      "status": "On",
-      "room": "Bedroom",
-      "floor": "floor1"
-    },
-    {
       "id": 2,
       "name": "Tv",
       "active": true,
       "status": "On",
-      "room": "Living room",
+      "room": "Living room tets",
       "floor": "floor2"
     },
     {
       "id": 3,
       "name": "tv",
-      "active": false,
-      "status": "Of",
+      "active": true,
+      "status": "On",
       "room": "Room1",
       "floor": "floor1"
     },
@@ -93,6 +85,30 @@
       "status": "Of",
       "room": "qsqs",
       "floor": "floor0"
+    },
+    {
+      "name": "Mohssine Elattari",
+      "active": false,
+      "status": "Of",
+      "room": "Mohssine Elattari",
+      "floor": "Mohssine Elattari",
+      "id": 5
+    },
+    {
+      "name": "Marcia Sims",
+      "active": false,
+      "status": true,
+      "room": "Brynn Ayala",
+      "floor": "Gillian Powers",
+      "id": 6
+    },
+    {
+      "name": "Aquila Oneill",
+      "active": false,
+      "status": true,
+      "room": "Blaine Elliott",
+      "floor": "Fitzgerald Mcdonald",
+      "id": 7
     }
   ]
 }
